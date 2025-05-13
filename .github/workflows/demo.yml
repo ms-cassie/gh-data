@@ -25,9 +25,10 @@ jobs:
         run: npm ci
       - name: Build website
         run: npm run build
-      - name: dist-files
+      - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
+          name: dist-files
           path: |
             dist
             package.json
